@@ -6,7 +6,7 @@
 /*   By: babels <babels@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/13 13:15:08 by babels            #+#    #+#             */
-/*   Updated: 2023/12/13 18:16:54 by babels           ###   ########.fr       */
+/*   Updated: 2023/12/13 18:34:18 by babels           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,8 @@ int main(void)
     
     while (ScavTrap.getHitPoints() > 0)
     {
-        ScavTrap.attack("Skag");
+        ScavTrap.choose_Name_Ennemy("Skag");
+        ScavTrap.attack(ScavTrap.getEnnemyName());
         ScavTrap.guardGate();
         ScavTrap.takeDamage(30);
         if (ScavTrap.getHitPoints() < 0)

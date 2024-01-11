@@ -6,12 +6,12 @@
 #    By: babels <babels@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/12/11 15:28:50 by babels            #+#    #+#              #
-#    Updated: 2023/12/20 15:38:02 by babels           ###   ########.fr        #
+#    Updated: 2023/12/20 15:44:46 by babels           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = ClapTrap
-SOURCES = main.cpp ClapTrap.Class.cpp \
+NAME = FragTrap
+SOURCES = main.cpp ClapTrap.Class.cpp ScavTrap.Class.cpp FragTrap.Class.cpp \
 
 OBJECTS = $(SOURCES:.cpp=.o)
 
