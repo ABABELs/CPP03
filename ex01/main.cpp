@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: babels <babels@student.42.fr>              +#+  +:+       +#+        */
+/*   By: aabel <aabel@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/13 13:15:08 by babels            #+#    #+#             */
-/*   Updated: 2023/12/13 18:34:18 by babels           ###   ########.fr       */
+/*   Updated: 2024/01/11 12:59:14 by aabel            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,8 +21,10 @@ int main(void)
     {
         ScavTrap.choose_Name_Ennemy("Skag");
         ScavTrap.attack(ScavTrap.getEnnemyName());
-        ScavTrap.guardGate();
+        if (ScavTrap.getHitPoints() < 30)
+            ScavTrap.guardGate();
         ScavTrap.takeDamage(30);
+        ScavTrap.beRepaired(10);
         if (ScavTrap.getHitPoints() < 0)
             std::cout << ScavTrap.getName() << " Was Died for a few time! Fortunetly you use your guard Gate :D !" << std::endl;
     }
